@@ -1,0 +1,4 @@
+include secret_santa/schema.sql
+graft secret_santa/static
+graft secret_santa/templates
+global-exclude *.pyc
