@@ -12,7 +12,7 @@
     {% if g.user['terms'] == 0 %}
     <li><a href="{{ url_for('signup.index') }}">Sign up for Secret Santa</a></li>
     {% else %}
-    <li><a href="{{ url_for('mylist.index') }}">Add to your list</li>
+    <li><a href="{{ url_for('mylist.index') }}">Add to your list</a></li>
     {% endif %}
     <li><a href="{{ url_for('account.index') }}">Edit account details</a></li>
 
