@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}MyList{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post" id="form">
+    <textarea form="form" name="mylist" id="myname" cols="35" wrap="soft">{% if g.user['list'] == '' %}Enter your list here.{% else %}{{ g.user['list'] }}{% endif %}</textarea>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Sign up for Secret Santa{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <p>Welcome to Secret Santa!</p>
+
+  <p>
+  After signing up you will be able to create a wishlist that only your
+  Secret Santa will be able to see.
+  </p>
+
+  <form method="post">
+    <div>
+      <input type="checkbox" name="terms" id="terms">
+      <label for="terms">I accept the terms and conditions outlined above.</label>
+    </div>
+    <input type="submit" value="Sign up">
+  </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Start Secret Santa{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <p>
+  Check the box below and submit to match.
+  </p>
+
+  <form method="post">
+    <div>
+      <input type="checkbox" name="confirm" id="confirm">
+      <label for="confirm">I confirm that I want to match participants now.</label>
+    </div>
+    <input type="submit" value="Start">
+  </form>
+{% endblock %}

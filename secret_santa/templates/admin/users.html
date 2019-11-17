@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}User list{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <ul>
+    {% for user in user_list %}
+
+    <li>{{ user['name'] }} {{ user['surname'] }}</li>
+      <ul>
+        <li>{% if user['list'] == '' %}Empty wishlist.{% else %}Filled out wishlist.{% endif %}</li>
+        <li>{% if user['terms'] == 0 %}Not signed up.{% else %}Signed up.{% endif %}</li>
+        <li>{% if user['match'] == None %}Not matched.{% else %}Matched.{% endif %}</li>
+      </ul>
+    {% endfor %}
+  </ul>
+{% endblock %}

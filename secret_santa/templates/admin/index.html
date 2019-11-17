@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Admin{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <ul>
+    <li><a href="{{ url_for('admin.users') }}">User list</a></li>
+    <li><a href="{{ url_for('admin.start') }}">Start Secret Santa</a></li>
+    <li><a href="{{ url_for('admin.send_emails') }}">Send Santa Mail</a></li>
+  </ul>
+{% endblock %}

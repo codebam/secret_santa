@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Menu{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <ul>
+    {% if g.user['match'] != None %}
+    <li><a href="{{ url_for('match.index') }}">View your match</a></li>
+    {% endif %}
+    {% if g.user['terms'] == 0 %}
+    <li><a href="{{ url_for('signup.index') }}">Sign up for Secret Santa</a></li>
+    {% else %}
+    <li><a href="{{ url_for('mylist.index') }}">Add to your list</li>
+    {% endif %}
+    <li><a href="{{ url_for('account.index') }}">Edit account details</a></li>
+
+    {% if g.user['id'] == 1 %}
+    <li><a href="{{ url_for('admin.index') }}">Admin</a></li>
+    {% endif %}
+  </ul>
+{% endblock %}

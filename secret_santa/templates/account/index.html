@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Edit{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="username">Name</label>
+    <input name="name" id="name" value="{{ g.user.name }}">
+    <label for="username">Surname</label>
+    <input name="surname" id="surname" value="{{ g.user.surname }}">
+    <label for="username">Username</label>
+    <input name="username" id="username" value="{{ g.user.username }}">
+    <label for="password">Current Password</label>
+    <input type="password" name="password" id="password" required>
+    <label for="password">New Password</label>
+    <input type="password" name="new_password" id="new_password">
+    <input type="submit" value="Update">
+  </form>
+{% endblock %}

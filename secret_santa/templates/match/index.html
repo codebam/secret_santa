@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}User list{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <ul>
+    <h3>{{ match['name'] }} {{ match['surname'] }}</h3>
+    <p>
+    {{ match['list'] }}
+    </p>
+  </ul>
+{% endblock %}
