@@ -49,11 +49,8 @@ def start():
 
         user_list = get_db().execute("SELECT * FROM user WHERE terms = 1").fetchall()
 
-        if len(user_list) == 1:
+        if len(user_list) < 3:
             error = "You must have at least 3 participants to continue."
-
-        elif len(user_list) % 2 == 0:
-            error = "You must have an odd number of participants to continue."
 
         if error is None:
             if confirm is not None:
